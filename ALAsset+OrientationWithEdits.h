@@ -10,6 +10,6 @@
 
 @interface ALAsset (OrientationWithEdits)
 
-- (UIImage *)assetWithOrientationAndEdits:(ALAsset *)asset;
+- (UIImage *)assetWithOrientationAndEdits;
 
 @end
