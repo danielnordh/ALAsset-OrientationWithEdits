@@ -3,4 +3,4 @@ Useful when you are importing images from a users photo library and they come in
     
     ALAsset *asset = 'some ALAsset';
     UIImage *someImage;
-    someImage = [asset assetWithOrientationAndEdits:asset];
+    someImage = [asset assetWithOrientationAndEdits];
