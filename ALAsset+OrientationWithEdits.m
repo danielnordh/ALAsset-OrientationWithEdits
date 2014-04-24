@@ -10,7 +10,7 @@
 
 @implementation ALAsset (OrientationWithEdits)
 
-- (UIImage *)assetWithOrientationAndEdits:(ALAsset *)asset{
+- (UIImage *)assetWithOrientationAndEdits{
     
     ALAssetRepresentation *representation = [self defaultRepresentation];
     UIImage *assetImage;
@@ -41,7 +41,7 @@
 
         // Fix rotation
         UIImageOrientation orientation = UIImageOrientationUp;
-        NSNumber* orientationValue = [asset valueForProperty:ALAssetPropertyOrientation];
+        NSNumber* orientationValue = [self valueForProperty:ALAssetPropertyOrientation];
         
         if (orientationValue != nil) {
             orientation = [orientationValue intValue];
@@ -52,7 +52,7 @@
     } else {
         // Fix rotation for images without filters
         UIImageOrientation orientation = UIImageOrientationUp;
-        NSNumber* orientationValue = [asset valueForProperty:ALAssetPropertyOrientation];
+        NSNumber* orientationValue = [self valueForProperty:ALAssetPropertyOrientation];
         if (orientationValue != nil) {
             orientation = [orientationValue intValue];
         }
